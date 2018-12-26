@@ -1,0 +1,19 @@
+::TABLES::
+
+1.ProductCatagory(Id,Name,Description,Status) -- Electronics/BeautyProducts #done
+
+2.ProductType(Id,ProductCatagoryId,Name,Description,Status) -- Fan,Light/Fashwash   #done
+3.ProductSubType(Id,ProductTypeId,Name,Description,Status) -- ceilling,table/ Fashwash  #done
+
+4.Products(Id,ProductSubTypeId,Name,Description,Brand,Status,CreatedDate)  -- bajaj fans/himalaya
+5.ProductQuotation(Id,ProductId,Quantity,QuantityUnitId,PricePerUnit,Discount,VendorId) -- 2k-20 pcs-by abc shop/ 100pcs
+
+6.QuantityUnit(Id,Name,Description) --KG/Pieces/Liters #done
+
+::TABLES::
+Create table ProductCatagory(Id varchar(45) ,Name varchar(255),Description varchar(255),Status int (10));
+Create table ProductType(Id varchar(45),ProductCatagoryId varchar(45),Name varchar(255),Description varchar(255),Status int (10));
+Create table ProductSubType(Id varchar(45),ProductTypeId varchar(45),Namevarchar(255),Description varchar(255),Status int (10)); 
+Create table Products(Id varchar(45),ProductSubTypeId varchar(45),Name varchar(255),Description varchar(255),Brand varchar(255),Status int (10),CreatedDate timestamp);  
+Create table ProductQuotation(Id varchar(45),ProductId varchar(45),Quantity int(10),QuantityUnitId int(10),PricePerUnit DOUBLE,DiscountV DOUBLE,VendorId varchar(45)); 
+Create table QuantityUnit(Id int(10),Name varchar(45),Description varchar(255));

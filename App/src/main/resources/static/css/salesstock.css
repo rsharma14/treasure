@@ -1,0 +1,182 @@
+.menu-navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu-dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.menu-dropdown .menu-dropbtn {
+    cursor: pointer;
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.menu-navbar a:hover, .menu-dropdown:hover .menu-dropbtn, .menu-dropbtn:focus {
+    background-color: red;
+}
+
+.menu-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.menu-dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.menu-dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.menu-show {
+    display: block;
+}
+
+.action-btn.dropdown{
+	text-align: 
+}
+#main-content{
+	margin: 5px;
+}
+
+.menu-page-info{
+	width:100%;
+	height: 40px;
+	background-color: #337ab7;
+	
+}
+
+.menu-page-info .menu-desc{
+	float: left;
+	text-align: center;
+	color: white;
+}
+
+.menu-page-info .menu-action-btn{
+	float: right;
+		text-align: center;
+	
+}
+
+.menu-page-content{
+	margin: 5px;
+	border: 1px;
+}
+
+.form-group .control-lable{
+	text-align: right;
+}
+
+.error{
+	color: red;
+}
+
+fieldset.field-border {
+	border: 1px solid #b5b5b5;
+	border: 1px solid #0091cd;
+    margin: 0px 4px 0 12px;
+	margin: 0;
+    padding: 0 15px;
+	margin-bottom: 10px;
+	padding-top: 9px;
+}
+
+
+fieldset.field-border legend {
+	border-bottom: none;
+	width: auto;
+	font-size: 12px;
+	margin-left: -4px;
+	padding: 0px 4px;
+	font-weight: 600;
+	margin-bottom: 0px;
+}
+
+#showSearchProducts table{
+min-width: 67%;
+}
+
+#showSearchProducts table tr:nth-child(odd){
+  background-color:aliceblue;	
+}
+#showSearchProducts table tr:nth-child(even){
+  background-color:beige;	
+}
+
+table.dataTable thead{
+	    background-color: aliceblue;
+}
+
+/* #selected-product-list td[data-total]{ */
+/* 	float: right; */
+/* } */
+
+.show-search-products:hover{
+	cursor: default;
+	font-weight: bold;
+}
+
+.product-tr-0{
+    opacity: 0.5;
+}
+
+.product-td-0{
+	    display: block;
+    float: right;
+    margin-right: 2%;
+    color: red;
+    font-weight: bold;
+}
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.accord-panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
