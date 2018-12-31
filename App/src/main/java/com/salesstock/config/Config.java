@@ -2,14 +2,16 @@ package com.salesstock.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import com.salesstock.intercepter.AdminSecurityInterceptor;
 import com.salesstock.intercepter.TwoInterceptor;
+
+import springfox.documentation.builders.PathSelectors;
+import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spring.web.plugins.Docket;
 
 @Configuration
 public class Config implements WebMvcConfigurer{
@@ -30,5 +32,12 @@ public class Config implements WebMvcConfigurer{
 	    	registry.addInterceptor(new AdminSecurityInterceptor()).addPathPatterns( "/a/**");
 	    	registry.addInterceptor(new TwoInterceptor()).addPathPatterns("/secure/*", "/profile/**");
 	    }
-	 
+	    @Bean
+	    public Docket api() {    
+//	    	http://localhost:7070/salesstock/swagger-ui.html
+	        return new Docket(DocumentationType.SWAGGER_2)          
+	          .select()                                       
+	          .apis(RequestHandlerSelectors.basePackage("com.salesstock"))
+	          .build();
+	    }
 }
